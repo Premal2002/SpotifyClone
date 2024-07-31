@@ -144,7 +144,7 @@ nav ul li{
 
     .songItemContainer{
         margin-top: 10px;
-        max-height: 360px;
+        max-height: 330px;
     }
 
     .songItem{
@@ -165,8 +165,8 @@ nav ul li{
     .container{
         margin: 15px auto;
         width: 73%;
-        min-height: 400px;
-        max-height: 410px;
+        min-height: 58vh;
+       max-height: 50vh;
     }
 
     .songInfo{
@@ -180,6 +180,10 @@ nav ul li{
 
     .bottom{
         height : auto;
+        bottom: 0;
+    }
+    body{
+        height: 100vh;
     }
 
 
