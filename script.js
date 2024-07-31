@@ -10,6 +10,8 @@ let playGif = document.getElementById('playGif');
 let masterSongName = document.getElementById('masterSongName');
 songItems =Array.from(document.getElementsByClassName('songItem'));
 
+let curSongID = -1;
+
 
 let songs = [
     {songName : "Doraemon", filePath : "songs/1.mp3", coverPath : "covers/1.jpg",timeStamp : "1:44"},
@@ -78,33 +80,35 @@ myProgressBar.addEventListener('change',()=>{
 
 const makeAllPlay = ()=>{
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
-        element.classList.remove('fa-pause-circle');
-        element.classList.add('fa-play-circle');
+        // console.log("makeallplay");
+        element.classList.remove('fa-circle-pause');
+        element.classList.add('fa-circle-play');
     })
 }
 
 Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
     element.addEventListener('click',(e)=>{
-        makeAllPlay();
         songIndex = parseInt(e.target.id);
         // console.log(e.target.classList)
         // console.log(e.target.classList.contains('fa-circle-play'));
         if(e.target.classList.contains('fa-circle-play')){
+            makeAllPlay();
             e.target.classList.remove('fa-circle-play');
             e.target.classList.add('fa-circle-pause');
-            audioElement.src = `songs/${songIndex+1}.mp3`;
-            masterSongName.innerText = songs[songIndex].songName;
-            audioElement.currentTime = 0;
+            if(songIndex != curSongID){
+                audioElement.src = `songs/${songIndex+1}.mp3`;
+                masterSongName.innerText = songs[songIndex].songName;
+                audioElement.currentTime = 0;
+            }
             audioElement.play();
             playGif.style.opacity = 1;
             masterPlay.classList.remove('fa-circle-play');
             masterPlay.classList.add('fa-circle-pause');
+            curSongID = songIndex;
         }else {
-            // console.log(e.target);
             e.target.classList.remove('fa-circle-pause');
             e.target.classList.add('fa-circle-play');
             audioElement.pause();
-
             masterPlay.classList.remove('fa-circle-pause');
             masterPlay.classList.add('fa-circle-play');
             playGif.style.opacity = 0;
