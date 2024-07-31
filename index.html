@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Listen to your favourite songs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+        <li class="brand"><img src="logo.png" alt="Spotify"> Spotify</li>
+        <li>Home</li>
+        <li>About</li>
+    </ul>
+  </nav>  
+
+  <div class="container">
+    <div class="songList">
+      <h1>Cartoon Nostalgia : Timeless Hits</h1>
+      <div class="songItemContainer">
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="0" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="1" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="2" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="3" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="4" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="5" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="6" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="7" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="8" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="9" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="10" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="11" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="12" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="13" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="14" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="15" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="16" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+        <div class="songItem">
+          <img alt="1">
+          <span class="songName">Let me Love You</span>
+          <span class="songListPlay"><span class="timestamp">05:34<i id="17" class="songItemPlay fa-solid fa-circle-play"></i></span></span>
+        </div>
+      </div>
+    </div>
+    <div class="songBanner"></div>
+  </div>
+
+  <div class="bottom">
+    <input type="range" name="range" id="myProgressBar" value="0" min="0" max="100">
+    <div class="songInfo">
+      <img src="playing.gif" id="playGif" alt="" width="50px"><span id="masterSongName">Doreamon</span>
+    </div>
+    <div class="icons">
+        <!-- fontawesome icons -->
+        <i id="previous" class="fa-solid fa-3x fa-backward-step"></i>
+        <i class="fa-solid fa-3x fa-circle-play" id="masterPlay"></i>
+        <i id="next" class="fa-solid fa-3x fa-forward-step"></i>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/8691aa59c4.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
