@@ -49,6 +49,8 @@ nav ul li{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 5px;
+    padding-bottom: 10px;
 }
 
 .container{
@@ -144,7 +146,7 @@ nav ul li{
 
     .songItemContainer{
         margin-top: 10px;
-        max-height: 330px;
+        max-height: 85%;
     }
 
     .songItem{
@@ -165,7 +167,7 @@ nav ul li{
     .container{
         margin: 15px auto;
         width: 73%;
-        min-height: 58vh;
+        min-height: 70%;
        max-height: 50vh;
     }
 
