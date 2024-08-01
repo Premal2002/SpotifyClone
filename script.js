@@ -1,4 +1,4 @@
-// latest update time and date = 31 July : 21:20
+// latest update time and date = 1 August : 12:54
 
 console.log("Welcome to spotify");
 
@@ -50,8 +50,8 @@ masterPlay.addEventListener('click',()=>{
         audioElement.play();
         //making small playbutton aside each song name play
         makeAllPlay();
-        document.getElementById(songIndex).classList.remove('fa-play-circle');
-        document.getElementById(songIndex).classList.add('fa-pause-circle');
+        document.getElementById(songIndex).classList.remove('fa-circle-play');
+        document.getElementById(songIndex).classList.add('fa-circle-pause');
 
         masterPlay.classList.remove('fa-circle-play');
         masterPlay.classList.add('fa-circle-pause');
@@ -72,6 +72,28 @@ audioElement.addEventListener('timeupdate',()=>{
     progress = parseInt((audioElement.currentTime/audioElement.duration)*100);
     // console.log(progress);
     myProgressBar.value = progress;
+    
+    //if song ends then play next song
+    if(myProgressBar.value == 100){
+        if(songIndex > totalSongs-1){
+            songIndex = 0;
+        }else{
+            songIndex += 1;
+        }
+        audioElement.src = `songs/${songIndex+1}.mp3`;
+        masterSongName.innerText = songs[songIndex].songName;
+            audioElement.currentTime = 0;
+            audioElement.play();
+    
+            //making small playbutton aside each song name play
+            makeAllPlay();
+            document.getElementById(songIndex).classList.remove('fa-circle-play');
+            document.getElementById(songIndex).classList.add('fa-circle-pause');
+    
+            playGif.style.opacity = 1;
+            masterPlay.classList.remove('fa-circle-play');
+            masterPlay.classList.add('fa-circle-pause');
+    }
 
 })
 
@@ -130,10 +152,10 @@ document.getElementById('next').addEventListener('click',()=>{
         audioElement.currentTime = 0;
         audioElement.play();
 
-         //making small playbutton aside each song name play
-         makeAllPlay();
-         document.getElementById(songIndex).classList.remove('fa-play-circle');
-         document.getElementById(songIndex).classList.add('fa-pause-circle');
+        //making small playbutton aside each song name play
+        makeAllPlay();
+        document.getElementById(songIndex).classList.remove('fa-circle-play');
+        document.getElementById(songIndex).classList.add('fa-circle-pause');
 
         playGif.style.opacity = 1;
         masterPlay.classList.remove('fa-circle-play');
@@ -142,7 +164,7 @@ document.getElementById('next').addEventListener('click',()=>{
 
 document.getElementById('previous').addEventListener('click',()=>{
     if(songIndex == 0){
-        songIndex = 6;
+        songIndex = totalSongs;
     }else{
         songIndex -= 1;
     }
@@ -151,10 +173,10 @@ document.getElementById('previous').addEventListener('click',()=>{
         audioElement.currentTime = 0;
         audioElement.play();
 
-         //making small playbutton aside each song name play
-         makeAllPlay();
-         document.getElementById(songIndex).classList.remove('fa-play-circle');
-         document.getElementById(songIndex).classList.add('fa-pause-circle');
+        //making small playbutton aside each song name play
+        makeAllPlay();
+        document.getElementById(songIndex).classList.remove('fa-circle-play');
+        document.getElementById(songIndex).classList.add('fa-circle-pause');
 
         playGif.style.opacity = 1;
         masterPlay.classList.remove('fa-circle-play');
