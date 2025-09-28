@@ -74,6 +74,8 @@ nav ul li{
 
 .icons{
     margin-top: 15px;
+    display: flex;
+    gap: 1rem;
 }
 
 .icons i{
